@@ -1,15 +1,25 @@
 import "./App.css";
-import About from "./pages/about/About";
+import Home from "./pages/home/Home";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Auth from "./pages/auth/Auth";
+import Auth from "./pages/login/Auth";
+import Layout from "./components/NavLayout"
+import Control from "./pages/control";
+import Monitor from "./pages/monitoring";
+import UseAuthContext from "./components/Context/UseAuthContext";
+
 
 function App() {
+  const {user} = UseAuthContext()
   return (
     <div className="App">
       <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/" element={<Auth />} />
+        <Route  path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="auth" element={!user?<Auth />:<Navigate to="/" />} />
+          <Route path="control" element={user?<Control />:<Navigate to="/auth" />} />
+          <Route path="monitor" element={user?<Monitor />:<Navigate to="/auth" />} />
+          
+        </Route>
       </Routes>
     </div>
   );
