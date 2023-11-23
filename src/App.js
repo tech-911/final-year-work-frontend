@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route  path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={user?<Home />:<Navigate to="/auth" />} />
           <Route path="auth" element={!user?<Auth />:<Navigate to="/" />} />
           <Route path="control" element={user?<Control />:<Navigate to="/auth" />} />
           <Route path="monitor" element={user?<Monitor />:<Navigate to="/auth" />} />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Logo from "../../resources/images/AEIRG Logo.png";
 import home from "../../resources/images/Group 9.png";
 import control from "../../resources/images/Group 66.png";
@@ -18,7 +18,8 @@ const Nav = () => {
     }
 
     return (
-        <div className='w-1/5 bg-[#708090] h-screen '>
+        page !== 'auth' &&
+        <div className={`w-1/5 bg-[#708090] h-screen`}>
             <div className='bg-white w-fit h-fit mb-[4.375rem] mx-auto rounded-b-lg'>
                 <img src={Logo} alt="AEIRG Logo" className='py-5 px-7 w-[12.25rem] h-[175px]'/>
             </div>
@@ -42,7 +43,7 @@ const Nav = () => {
                     <button onClick={ handleClick }
                         className='block mt-[50%] mx-auto px-7 py-1 text-white text-[1.375rem] border-2 border-white rounded-3xl hover:bg-white transition-colors duration-700 hover:text-[#708090] active:border'>Logout</button>}
             </div>
-        </div>
+        </div >
     );
 }
 

@@ -18,8 +18,8 @@ const Auth = () => {
   }, [dispatch])
 
   return (
-  <div className="bg-[#D9D9D9] w-4/5 flex items-center">
-    <div className="m-auto bg-white py-[36px] w-[40%] h-fit m-auto rounded-lg">
+  <div className="bg-[#D9D9D9] w-screen h-screen flex items-center">
+    <div className="m-auto bg-white py-[30px] w-[30%] h-fit m-auto rounded-lg">
       <form onSubmit={handlesubmit}>
         <label
             className="mb-[32px] block text-3xl text-center font-bold text-#546270">Login</label> 
