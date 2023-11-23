@@ -18,7 +18,7 @@ const Nav = () => {
     }
 
     return (
-        page !== 'auth' &&
+        
         <div className={`w-1/5 bg-[#708090] h-screen`}>
             <div className='bg-white w-fit h-fit mb-[4.375rem] mx-auto rounded-b-lg'>
                 <img src={Logo} alt="AEIRG Logo" className='py-5 px-7 w-[12.25rem] h-[175px]'/>
