@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from './Nav'
 import { Outlet } from 'react-router-dom';
-import UseAuthContext from '../Context/UseAuthContext';
+import MobileNav from './mobileNav';
 
 const Layout = () => {
-    const { page } = UseAuthContext()
+    const [winscreens, setScreens] = useState(window.screen.width);
+    console.log(window.screen.width);
+
+    useEffect(() => {
+        window.onresize = () => {
+            setScreens(window.screen.width)
+        }   
+    }, [])
+    console.log("layout", winscreens)
     return (
-        <div className="flex">
-            {page !== 'auth' && <Nav />}
+        <div className={`${winscreens>=640 &&"flex"}`}>
+            {winscreens<640 ? <MobileNav/> : <Nav />}
             <Outlet/>
         </div>
     );
