@@ -6,16 +6,17 @@ import { ToastContainer, toast } from "react-toastify";
 const Auth = () => {
   const [accessCode, setAccess] = useState("");
   const [role, setRole] = useState("");
+  const [loading, setLoading] = useState(0);
   const { dispatch } = UseAuthContext();
   const { login, error, isLoading } = useLogin();
 
   const handlesubmit = async (e) => {
+    setLoading(1);
     e.preventDefault();
 
     await login(role, accessCode);
     // console.log("error at login: ", error);
-
-   
+    setLoading(0);
   };
 
   useEffect(() => {
@@ -47,7 +48,7 @@ const Auth = () => {
             disabled={error ? false : isLoading}
             className="block text-lg text-white font-bold bg-[#546270] py-1.5 px-4 mx-auto mt-5 rounded-md md:mt-6 md:text-xl md:py-2 md:px-6"
           >
-            Submit
+            {loading ? "Loading..." : "Submit"}
           </button>
         </form>
       </div>
