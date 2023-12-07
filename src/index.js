@@ -9,11 +9,11 @@ import AuthContext from "./components/Context/AuthContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AuthContext>
+    <AuthContext>
+      <BrowserRouter>
         <App />
+      </BrowserRouter>
       </AuthContext>
-    </BrowserRouter>
   </React.StrictMode>
 );
 

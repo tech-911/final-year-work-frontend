@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { createContext } from 'react';
 
 export const UserContext = createContext()
@@ -27,13 +27,15 @@ const AuthContext = ({ children }) => {
        user: null,
         page: "" 
     })
-    
-    useEffect(() => {
+       
+    if (!state.user) {
         const user = JSON.parse(localStorage.getItem("User"))
         if (user) {
-            dispatch({type:"LOGIN", payload:user})
+           dispatch({type:"LOGIN", payload:user}) 
         }
-    },[])
+            
+     }
+   
 
     console.log("States",state)
     return (

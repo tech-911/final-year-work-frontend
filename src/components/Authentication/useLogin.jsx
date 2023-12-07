@@ -22,9 +22,9 @@ const useLogin = () => {
         const json = await response.json()
 
         if (!response.ok) {
-            setError(json.error)
+            setError(json.message)
             setLoading(false)
-            console.log('User',json.error)
+            console.log('User',json.message)
         }
 
         if (response.ok) {
