@@ -56,7 +56,7 @@ const MobileNav = () => {
                                 className='block cursor-pointer px-5 py-1 text-white text-sm border-2 border-white hover:rounded-3xl hover:bg-white transition-colors duration-700 hover:text-[#708090] active:border'>Logout</button>}
                 </div>
                 
-                <div className={`menu w-[90%] bg-[#708090] invisible h-screen absolute top-[3.9375rem] left-[-100%] transition-all  duration-700 max-[375px]:w-full`}>
+                <div className={`menu z-20 w-[90%] bg-[#708090] invisible h-screen absolute top-[3.9375rem] left-[-100%] transition-all  duration-700 max-[375px]:w-full`}>
                     <div className='flex justify-between mb-[4.375rem] items-center px-10'>
                         <div className='bg-white w-fit h-fit rounded-b-lg mx-auto'>
                           <img src={Logo} alt="AEIRG Logo" className='py-5 px-7  w-[170px] h-[150px]' />
