@@ -15,7 +15,7 @@ const Monitor = () => {
             <DateTime/>
             <div className='relative'>
                 <img src={image1} alt="Frame" className='absolute' />
-                <embed className='z-10 h-[240px] w-[320px] mx-auto' src="https://8032-2c0f-2a80-67-5c10-cd57-3538-54a3-16e3.ngrok-free.app /stream"></embed>
+                <embed className='z-10 h-[240px] w-[320px] mx-auto' src="https://8032-2c0f-2a80-67-5c10-cd57-3538-54a3-16e3.ngrok-free.app/stream"></embed>
             </div>
                 
         </div>
