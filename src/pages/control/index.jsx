@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import UseAuthContext from "../../components/Context/UseAuthContext";
-import { FiImage } from "react-icons/fi";
+// import { FiImage } from "react-icons/fi";
 import { baseUrl } from "../../BaseUrls/base";
 import { toast } from "react-toastify";
+import image1 from '../../resources/images/Frame 2.png'
+// import UseAuthContext from '../../components/Context/UseAuthContext';
+// import DateTime from '../../components/Datetime/DateTime';
 
 const Control = () => {
   const { dispatch } = UseAuthContext();
@@ -116,7 +119,7 @@ const Control = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-20 px-9 w-full h-screen sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5">
+    <div className="flex flex-col bg-[#d9d9d998] items-center py-20 px-9 w-full h-screen sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5">
       <p className="text-[#546270] text-[40px] font-[700] mb-14 self-start">
         Control Application
       </p>
@@ -182,9 +185,22 @@ const Control = () => {
             </button>
           </div>
         </div>
-        <div className="rounded-[14px] bg-[#d9d9d998] flex flex-col items-center gap-4 py-4 px-5 lg:w-[340px] w-[400px]">
-          <FiImage className="text-[200px] text-[#708090] h-full" />
+        <div className="rounded-[14px] flex flex-col items-center gap-4 py-4 px-5 lg:w-[340px] w-[400px]">
+          {/* <FiImage className="text-[200px] text-[#708090] h-full" />
+           */}
+          <div className='relative'>
+                <img src={image1} alt="Frame" className='absolute' />
+                <img className='z-[10] h-[240px] w-[320px] mx-auto mt-4 relative' alt="" src="https://58bb-102-215-57-161.ngrok-free.app/stream"></img>
+          </div>
         </div>
+        {/* <div className='h-screen w-full flex flex-col items-center bg-[#D9D9D9] justify-center sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5'> */}
+            {/* <DateTime/> */}
+            {/* <div className='relative'>
+                <img src={image1} alt="Frame" className='absolute' />
+                <img className='z-[10] h-[240px] w-[320px] mx-auto mt-4 relative' src="https://8032-2c0f-2a80-67-5c10-cd57-3538-54a3-16e3.ngrok-free.app/stream"></img>
+            </div> */}
+                
+        {/* </div> */}
       </div>
     </div>
   );
