@@ -16,7 +16,7 @@ const Nav = () => {
         logout()
     }
     return (
-        <div className={`w-1/5 bg-[#708090] h-screen sm:w-[38%] md:w-[33%] lg:w-1/4 xl:w-1/5`}>
+        <div className={`w-1/5 bg-[#708090] sm:w-[38%] md:w-[33%] lg:w-1/4 xl:w-1/5`}>
             <div className='bg-white w-fit h-fit mb-[4.375rem] mx-auto rounded-b-lg'>
                 <img src={Logo} alt="AEIRG Logo" className='py-5 px-7 w-[12.25rem] h-[175px]'/>
             </div>

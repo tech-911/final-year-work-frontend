@@ -119,12 +119,12 @@ const Control = () => {
   };
 
   return (
-    <div className="flex flex-col bg-[#d9d9d998] items-center py-20 px-9 w-full h-screen sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5">
+    <div className="flex flex-col bg-[#d9d9d998] items-center py-20  px-4 lg:px-9 w-full sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5">
       <p className="text-[#546270] text-[40px] font-[700] mb-14 self-start">
         Control Application
       </p>
-      <div className="flex lg:flex-row flex-col items-center justify-center gap-10 w-full">
-        <div className="w-[400px] rounded-[14px] bg-[#d9d9d998] flex flex-col items-center gap-4 py-6 px-5">
+      <div className="flex lg:flex-row flex-col items-start justify-center lg:gap-8 gap-2 w-full">
+        <div className="w-full lg:min-w-[300px] rounded-[14px] bg-[#d9d9d998] flex flex-col items-center gap-4 py-6 px-5">
           <div className="flex flex-row items-center gap-4">
             <p className="text-[#546270] text-[16px] font-[700]">
               Control Node
@@ -185,16 +185,34 @@ const Control = () => {
             </button>
           </div>
         </div>
-        <div className="rounded-[14px] flex flex-col items-center gap-4 py-4 px-5 lg:w-[340px] w-[400px]">
+
+        <div className="rounded-[14px] flex flex-col items-start gap-4 pb-4 w-full">
+          {/* //Redirect button to https://pvds.onrender.com/ */}
+
+          <div
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded cursor-pointer transition duration-200"
+            onClick={() => window.open("https://pvds.onrender.com/", "_blank")}
+          >
+            Full Monitor View Page &#8599;
+          </div>
           {/* <FiImage className="text-[200px] text-[#708090] h-full" />
            */}
-          <div className="relative">
+          {/* <div className="relative">
             <img src={image1} alt="Frame" className="absolute" />
             <embed
               className="z-[10] h-[240px] w-[320px] mx-auto mt-4 relative"
               alt=""
               src="https://c5db-102-91-70-195.ngrok-free.app/stream"
             ></embed>
+          </div> */}
+          <div style={{ width: "100%", height: "100vh" }}>
+            <iframe
+              src="https://pvds.onrender.com/"
+              title="Embedded PVDS"
+              width="100%"
+              height="100%"
+              style={{ border: "none" }}
+            />
           </div>
         </div>
         {/* <div className='h-screen w-full flex flex-col items-center bg-[#D9D9D9] justify-center sm:w-[62%] md:w-[67%] lg:w-3/4 xl:w-4/5'> */}
@@ -203,7 +221,6 @@ const Control = () => {
                 <img src={image1} alt="Frame" className='absolute' />
                 <img className='z-[10] h-[240px] w-[320px] mx-auto mt-4 relative' src="https://8032-2c0f-2a80-67-5c10-cd57-3538-54a3-16e3.ngrok-free.app/stream"></img>
             </div> */}
-
         {/* </div> */}
       </div>
     </div>

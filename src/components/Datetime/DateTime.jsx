@@ -41,7 +41,7 @@ const DateTime = () => {
           <p className="text-[#546270] text-2xl sm:text-4xl font-bold">{formattedTime}</p>
       </div>
       <div className="flex mb-2 justify-center sm:mb-4">
-        <p className="mr-2 text-[#546270]  text-2xl sm:text-4xl sm:mr-4 font-light">{month},</p>
+        <p className="mr-2 text-[#546270]  text-2xl sm:text-4xl sm:mr-4 font-light">{month}</p>
         <p className="mr-2 text-[#546270]  text-2xl sm:text-4xl sm:mr-4 font-light">{date},</p>
         <p className="mr-2 text-[#546270]  text-2xl sm:text-4xl sm:mr-4 font-light">{year}</p>
       </div>
